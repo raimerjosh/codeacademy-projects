@@ -162,7 +162,7 @@ class Person:
     elif choice == "slots":
       self.slots_game()
     else:
-      print("Oops, something went wrong")
+      print("Oops, something went wrong here")
       self.choose_game()
 
 
