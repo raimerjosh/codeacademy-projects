@@ -16,7 +16,7 @@ class Person:
       print("Great! Welcome to The Great Raimer Casino. We have gifted you {cash} dollars to start with, but feel free to use our complementary ATM.".format(name = self.name, cash = self.cash))
     else:
       print("Sorry, come back when you are 21.")
-      
+
 #   #this will add money to my wallet so I can gamble more
   def add_cash(self):
     dollars_added = float(input("{name}, how much much money would you like to withdraw? ".format(name = self.name)))
@@ -24,7 +24,7 @@ class Person:
     return(self.cash)
     print(self.cash)
 
-# #this will allow me to check my balance as I am playing so I don't run out 
+# #this will allow me to check my balance as I am playing so I don't run out
   def check_balance(self):
     check_balance_statement = input("Would you like to check your balance now? ")
     if check_balance_statement == "yes":
@@ -55,20 +55,20 @@ class Person:
       elif pick_a_number >= dealer_number:
         print("You pushed")
         self.cash
-      else: 
+      else:
         print("You lost. Would you like to play again?")
     else:
-      return 
+      return
     print("Your balance is now " + str(self.cash) + " , would you like to play again?")
     play_again = input("Yes or No?")
     if play_again == "yes":
       self.black_jack_game()
-    else: 
+    else:
       cash_out = input("Would you like to cash out?")
       if cash_out == "yes":
         print(self.cash)
-      else: 
-        return 
+      else:
+        return
 
 
   def poker_game(self):
@@ -76,11 +76,11 @@ class Person:
     print("You currently have " + str(self.cash) + " dollars in your wallet")
     buy_in_choice = input("would you like to continue? Yes or No?")
     if buy_in_choice == "yes":
-      print("Great! Lets Play Poker!") 
+      print("Great! Lets Play Poker!")
     else:
-     return 
+     return
 
-#slots 
+#slots
 
   def slots_game(self):
     print("The current buy in is 5 dollars.")
@@ -95,28 +95,28 @@ class Person:
     if ready_statement == "yes":
       dealer_number = random.randint(1,3)
       spin = input("The machine is ready for your spin")
-      
+
       if spin == "spin":
         generated_number = random.randint(1,3)
         if generated_number == dealer_number:
           print("You Win!")
           self.cash += 20
-        else: 
+        else:
           print("You lost")
       else:
-        return    
+        return
     else:
-      return 
+      return
     print("Your balance is now " + str(self.cash) + " , would you like to play again?")
     play_again = input("Yes or No?")
     if play_again == "yes":
       self.slots_game()
-    else: 
+    else:
       cash_out = input("Would you like to cash out?")
       if cash_out == "yes":
         print(self.cash)
-      else: 
-        return 
+      else:
+        return
 
 
 #poker
@@ -137,22 +137,22 @@ class Person:
     elif choice < dealer_number:
         print("You won 50 dollars!")
         self.cash += 50
-    else: 
+    else:
         print("You Lost")
-  
+
     print("Your balance is now " + str(self.cash) + " , would you like to play again?")
     play_again = input("Yes or No?")
     if play_again == "yes":
       self.poker_game()
-    else: 
+    else:
       cash_out = input("Would you like to cash out?")
       if cash_out == "yes":
         print(self.cash)
-      else: 
+      else:
         return
 
 
-  #choose game function 
+  #choose game function
   def choose_game(self):
     choice = input("We are currently offering three games to play: Blackjack, Poker, and Slots. Which one would you like to try?")
     if choice == "blackjack":
@@ -165,7 +165,7 @@ class Person:
       print("Oops, something went wrong")
       self.choose_game()
 
-  
+
 
 
 # #--------------------------------------------
@@ -176,15 +176,3 @@ p2.check_age()
 p2.add_cash()
 p2.check_balance()
 p2.choose_game()
-
-
-
-
-
-
-
-
-  
-
-
-
