@@ -1,0 +1,62 @@
+.title{
+    font-family: Helvetica;
+    font-size: 100px;
+    font-weight: bold;
+    color: khaki;
+    text-align: center;
+}
+
+
+h1.title{
+    background-image: url('../pattern.webp');
+    margin: 50px auto;
+}
+
+h3{
+    font-family: Helvetica;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+img{
+    padding: 0px;
+}
+
+figure{
+    padding: 0px;
+    margin: 0px;
+}
+
+figcaption{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Helvetica;
+    padding: 10px 0px 0px 0px;
+
+}
+
+h5{
+    font-size: 15px;
+    font-family: Helvetica;
+    font-weight: normal;
+}
+
+.brushes h3{
+    background-color: mediumspringgreen;
+}
+
+.frames h3{
+    background-color: lightcoral;
+}
+
+.paint h3{
+    background-color: skyblue;
+}
+
+span{
+    font-family: Helvetica;
+    color: blue;
+    font-weight: bold;
+}
+

@@ -1,0 +1,135 @@
+
+body {
+    padding: 0px 75px;
+    margin: 0;
+    border: 1px solid seashell;
+    background-color: black;
+    font-size: 22px;
+    font-family: Helvetica, sans-serif;
+    color: seashell;
+    opacity: 1;
+}
+
+
+
+.header{
+    display: inline-flex;
+    width: 1200px;
+    justify-content: space-between;
+    position: fixed;
+    background-color: black;
+    z-index: 1;
+}
+
+
+img {
+   height: 50px;
+   padding: 10px 0px;
+}
+
+.nav li {
+    padding: 0px 20px;
+    display: inline-block;
+    text-decoration: underline;
+    color: seashell;
+}
+
+
+
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1200px;
+    height: 700px;
+    background-image: url("resources/img-mission-background.webp");
+    align-items: center;
+}
+
+#banner div {
+    background-color: black;
+}
+
+#banner h4, h2 {
+    margin: 10px;
+    width: 1200px;
+    text-align: center;
+}
+
+
+
+#section_heading {
+    text-align: center;
+    width: 1200px;
+    flex-direction: column;
+    font-family: Helvetica, sans-serif;
+    color: seashell;
+    padding: 20px 0px;
+    margin: 0px;
+}
+
+#section_heading h2, h3 {
+    padding: 10px 0px 0px;
+    margin: 5px;
+}
+
+.photos {
+    display: inline-flex;
+    width: 1200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.photos img {
+    height: 200px;
+    width: 300px;
+    padding: 0px;
+}
+
+figure {
+    text-align: center;
+}
+
+.location {
+    position: relative;
+    top: 120px;
+    left: 535px;
+
+}
+
+#locations {
+    display: flex;
+    justify-content: center;
+    background-image: url(resources/img-locations-background.webp);
+    width: 1200px;
+    height: 600px;
+    align-items: center;
+}
+
+.city {
+    text-align: center;
+    padding: 30px;
+    width: 300px;
+    height: 200px;
+    margin: 30px;
+    background-color: black;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer h5 {
+    padding: 0px;
+    margin: 10px;
+}
+
+.copyright {
+    position: absolute;
+    left: 20px;
+    font-size: 10px;
+}
