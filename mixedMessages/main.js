@@ -10,11 +10,16 @@ const location = ['New York City', 'Asguard', 'Sakaar', 'Quantum Realm', 'London
 
 
 //random number for selecting a charactor 
-let randomChar = Math.floor(Math.random() * goodGuys.length);
+let randomCharNum = Math.floor(Math.random() * goodGuys.length);
 
-
-
+//random number for selecting a location 
+let randomLocNum = Math.floor(Math.random() * location.length)
  
   
-  
-  
+let goodCharactor = goodGuys[randomCharNum];
+let badCharactor = badGuys[randomCharNum];
+let randomLocation = location[randomLocNum];
+
+let string = `The next Marvel movie plot will be: ${goodCharactor} defeats ${badCharactor} in ${randomLocation}.`;
+
+console.log(string);
