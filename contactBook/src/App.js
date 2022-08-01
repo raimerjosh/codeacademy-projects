@@ -26,24 +26,24 @@ function App() {
   */
 
   const addContact = (name, number, email) => {
-    setContact((prev) => ([
-      ...prev,
+    setContact([
+      ...contacts,
      { name: name,
       number: number,
       email: email,
      }
-    ]))
+    ])
   }
 
   const addAppointment = (title, contact, date, time) => {
-    setAppointment((prev) => ([
-      ...prev,
+    setAppointment([
+      ...appointments,
      { title: title,
       contact: contact,
       date: date,
       time: time,
      }
-    ]))
+    ])
   }
 
   return (
@@ -74,7 +74,7 @@ function App() {
 
           <Route path={ROUTES.APPOINTMENTS}>
             {/* Add props to AppointmentsPage */}
-            <AppointmentsPage appointments={appointments} addAppointment={addAppointment} />
+            <AppointmentsPage appointments={appointments} addAppointment={addAppointment} contacts={contacts} />
           </Route>
 
         </Switch>

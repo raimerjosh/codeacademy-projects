@@ -8,27 +8,25 @@ export const ContactsPage = ({ contacts, addContact }) => {
   contact info and duplicate check
   */
 
-  const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
-  const [email, setEmail] = useState('');
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
+  const [email, setEmail] = useState("");
   const [duplicate, setDuplicate] = useState(false);
 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const [name, number, email] = e.target;
     /*
     Add contact info and clear data
     if the contact name is not a duplicate
     */
    if (!duplicate) {
      addContact(name, number, email);
+     setName("");
+     setEmail("");
+     setNumber("");
    }
-   setName('');
-   setEmail('');
-   setNumber('');
-   setDuplicate('');
-  }
+  };
 
   /*
   Using hooks, check for contact name in the 
@@ -36,14 +34,14 @@ export const ContactsPage = ({ contacts, addContact }) => {
   */
 
   useEffect(() => {
-    for (const contact in contacts) {
-      if (contact.name == name) {
+    for (let contact in contacts) {
+      if (contact.name === name) {
         setDuplicate(true);
         alert('This name already exists.');
         return;
       }
     }
-  }, [name]);
+  }, [name, contacts, duplicate])
 
   return (
     <div>
